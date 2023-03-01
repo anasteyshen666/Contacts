@@ -1,0 +1,21 @@
+print("|Contact book|")
+contact = {}
+for i in range(1):
+    namecontact = input('Contact name:')
+    name = input('Name:')
+    forname = input('Surname:')
+    adress = input('Address:')
+    number = input('Phone number:')
+    contact['Name'] = name
+    contact['Surname'] = forname
+    contact['Address'] = adress
+    contact['Phone number'] = number
+
+def Contact(name, forname, adress, number, namecontact):
+    with open(namecontact, 'w') as f:
+        for i in contact:
+            f.write(i + ':' + str(contact[i]) + '\n')
+
+
+a = Contact(name, forname, adress, number, namecontact)
+print('New Contact Saved Successfully')
